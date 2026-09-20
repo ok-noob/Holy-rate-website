@@ -126,3 +126,26 @@ body {
     color: #666;
     font-size: 0.9rem;
 }
+/* Video Card Hover Effect */
+.video-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+.video-placeholder:hover {
+    border-color: #00FF00;
+    color: #fff;
+}
+
+/* Sidebar collapse class (toggled via JS) */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed .nav-btn span {
+    display: none; /* Hide text when collapsed, keep icons */
+}
