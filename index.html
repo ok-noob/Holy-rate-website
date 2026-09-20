@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOLYRATE</title>
+  <title>HOLYRATE - Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,43 +12,63 @@
 <header class="top-bar">
   <div class="menu-icon">&#9776;</div>
   <div class="search-container">
-    <input type="text" placeholder="Search..." class="search-input">
-    <button class="search-btn">&#128269;</button>
+    <input type="text" id="mediaInput" placeholder="Add a movie or TV show..." class="search-input">
+    <button id="addBtn" class="search-btn">&#10133;</button>
   </div>
 </header>
 
 <div class="main-layout">
   <!-- Left Sidebar Navigation -->
   <aside class="sidebar">
-    <button class="nav-btn">&#127968; <span>Home</span></button>
-    <button class="nav-btn">&#128269; <span>Search</span></button>
-    <button class="nav-btn">&#127760; <span>Discover</span></button>
-    <button class="nav-btn">&#128196; <span>Lists</span></button>
+    <button class="nav-btn active" data-tab="home">&#127968; <span>Home</span></button>
+    <button class="nav-btn" data-tab="watchlist">&#128203; <span>Watchlist</span></button>
+    <button class="nav-btn" data-tab="watched">&#9989; <span>Watched</span></button>
+    <button class="nav-btn" data-tab="discover">&#127760; <span>Discover</span></button>
   </aside>
 
   <!-- Main Content Area -->
   <main class="content">
-    <section class="section-title">Continue Watching</section>
 
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="video-placeholder">Video Thumbnail</div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">Video Thumbnail</div>
+    <!-- HOME VIEW -->
+    <div id="home-view" class="view-section">
+      <section class="section-title">Welcome to HOLYRATE Tracker</section>
+      <p style="color: #aaa; margin-bottom: 20px;">Use the top bar to add movies or shows you want to track.</p>
+
+      <section class="section-title">Quick Stats</section>
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3 id="stat-watchlist">0</h3>
+          <p>Watchlist</p>
+        </div>
+        <div class="stat-card">
+          <h3 id="stat-watched">0</h3>
+          <p>Watched</p>
+        </div>
       </div>
     </div>
 
-    <div class="section-title" style="margin-top: 30px;">Start Watching</div>
-
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="video-placeholder">Video Thumbnail</div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">Video Thumbnail</div>
+    <!-- WATCHLIST VIEW -->
+    <div id="watchlist-view" class="view-section" style="display: none;">
+      <section class="section-title">My Watchlist</section>
+      <div id="watchlist-grid" class="media-grid">
+        <!-- Dynamic items go here -->
       </div>
     </div>
+
+    <!-- WATCHED VIEW -->
+    <div id="watched-view" class="view-section" style="display: none;">
+      <section class="section-title">Completed / Watched</section>
+      <div id="watched-grid" class="media-grid">
+        <!-- Dynamic items go here -->
+      </div>
+    </div>
+
+    <!-- DISCOVER VIEW -->
+    <div id="discover-view" class="view-section" style="display: none;">
+      <section class="section-title">Discover Trending</section>
+      <p style="color: #aaa;">Next step: We will connect a live movie database API here so you can search real movies automatically!</p>
+    </div>
+
   </main>
 </div>
 
