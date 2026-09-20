@@ -4,34 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOLYRATE</title>
-  <style>
-    body {
-        background-color: #111111;
-        color: #ffffff;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        text-align: center;
-    }
-    h1 {
-        color: #00FF00;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
-    p {
-        color: #ffffff;
-        font-size: 1.1rem;
-        margin-top: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
-  <h1>WELCOME TO THE HOLYRATE</h1>
-  <p>Coming Soon!</p>
+
+<!-- Top Bar -->
+<header class="top-bar">
+  <div class="menu-icon">&#9776;</div>
+  <div class="search-container">
+    <input type="text" placeholder="Search..." class="search-input">
+    <button class="search-btn">&#128269;</button>
+  </div>
+</header>
+
+<div class="main-layout">
+  <!-- Left Sidebar Navigation -->
+  <aside class="sidebar">
+    <button class="nav-btn">&#127968; <span>Home</span></button>
+    <button class="nav-btn">&#128269; <span>Search</span></button>
+    <button class="nav-btn">&#127760; <span>Discover</span></button>
+    <button class="nav-btn">&#128196; <span>Lists</span></button>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="content">
+    <section class="section-title">Continue Watching</section>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-placeholder">Video Thumbnail</div>
+      </div>
+      <div class="video-card">
+        <div class="video-placeholder">Video Thumbnail</div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top: 30px;">Start Watching</div>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-placeholder">Video Thumbnail</div>
+      </div>
+      <div class="video-card">
+        <div class="video-placeholder">Video Thumbnail</div>
+      </div>
+    </div>
+  </main>
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
